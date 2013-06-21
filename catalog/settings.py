@@ -1,5 +1,9 @@
 # Django settings for catalog project.
 
+import os
+
+FOLDER = os.getcwd()
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -109,9 +113,7 @@ ROOT_URLCONF = 'catalog.urls'
 WSGI_APPLICATION = 'catalog.wsgi.application'
 
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+    os.path.join(FOLDER, 'templates'),
 )
 
 INSTALLED_APPS = (
